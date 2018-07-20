@@ -1,0 +1,24 @@
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-style: solid;
+    border-width: 1em;
+    border-color: #222;
+    animation: animateBorders 6s linear 2s infinite alternate;
+}
+
+@keyframes animateBorders {
+    from {
+        border-color: #222;
+    } to {
+        border-color: #666;
+    }
+}

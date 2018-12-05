@@ -21,6 +21,7 @@
         width: 100%;
         display: block;
         object-fit: cover;
+        transition: filter .5s ease-in;
 
         .is-inverted & {
             filter: invert(.8);

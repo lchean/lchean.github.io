@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i');
+
+$white: #fefefe;
+$black: #222;
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 1em;
+    line-height: 1.4;
+    letter-spacing: .025em;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    font-size: 1.15rem;
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
+    transition: border-color .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out, padding .25s ease-in;
+
+    &.selected {
+        padding-right: .5em;
+        padding-left: .5em;
+        color: $white;
+        background-color: $black;
+
+        .is-inverted & {
+            color:$black;
+            background: $white;        
+        }
+    }
+
+    &:hover {
+        border-color: inherit;
+    }
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: $black;
+    background-color: $white;
+    transition: color .5s ease-in-out, background-color .5s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+
+    &.is-inverted {
+        color:$white;
+        background: $black;        
+    }
+}

@@ -17,7 +17,7 @@ export default class More extends React.Component {
                 <h2>More</h2>     
                 <section className="more-section">               
                     <ul>
-                        <li>Advanced knowledge in HTML, CSS, and JS</li>
+                        <li>Advanced skills in HTML, CSS, and JS</li>
                         <li>Good understanding of Wordpress, Magento 1, Salesforce Commerce Cloud (Demandware)</li>
                         <li>This website uses the <a href="https://fonts.google.com/specimen/EB+Garamond">EB Garamond Google font</a> and was built with <a href="https://github.com/facebook/create-react-app">Create React App</a> and <a href="https://pages.github.com/">Github Pages</a></li>
                         <li>The photos are from <a href="https://www.hedislimane.com/diary/">Hedi Slimane Diary</a></li>

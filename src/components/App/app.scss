@@ -1,47 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i');
-
 $white: #fefefe;
 $black: #222;
-
 html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, 
+*:before, 
+*:after {
     box-sizing: inherit;
 }
 
-body {
+body,
+button {
     font-family: 'EB Garamond', serif;
     font-size: 1em;
-    line-height: 1.4;
-    letter-spacing: .025em;
+    line-height: 1.6;
+    letter-spacing: .0825em;
 }
 
-a {
+a,
+button {
     position: relative;
     display: inline-block;
     color: inherit;
-    font-size: 1.15rem;
     text-decoration: none;
-    border-bottom: solid 1px transparent;
-    transition: border-color .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out, padding .25s ease-in;
 
-    &.selected {
-        padding-right: .5em;
-        padding-left: .5em;
-        color: $white;
-        background-color: $black;
-
-        .is-inverted & {
-            color:$black;
-            background: $white;        
+    &.selected,
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
     }
 
-    &:hover {
-        border-color: inherit;
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: $black;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform .25s ease-out;
     }
+
+    .is-inverted & {
+        &::after {
+            background: $white;     
+        }
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: .75em;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .wrapper {
@@ -62,4 +91,8 @@ a {
         color:$white;
         background: $black;        
     }
+}
+
+.italic {
+    font-style: italic;
 }

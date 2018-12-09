@@ -7,17 +7,17 @@
     height: 100%;
 
     @media screen and (min-width: 760px) {
-        width: 50%;
+        width: 64%;
     }
 }
 
 .content {
     width: 88.8%;
-    height: 77.7%;
+    margin-right: auto;
+    margin-left: auto;
     text-align: justify;
 
     @media screen and (min-width: 760px) {        
         width: 55.5%;
-        height: 66.6%;
     }
 }

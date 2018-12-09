@@ -4,8 +4,7 @@ import { TransitionGroup, Transition } from "react-transition-group";
 import { Route, Switch } from "react-router-dom";
 
 import Home from '../Routes/Home';
-import Contact from '../Routes/Contact';
-import About from '../Routes/About';
+import More from '../Routes/More';
 
 const completeCall = target => {
     TweenLite.set(target, { clearProps: "position, opacity" });
@@ -22,7 +21,7 @@ class AppRoutes extends React.Component {
         const {history} = this.props;
 
         this.unlisten = history.listen((location) => {
-            this.handleGlobalClass(location.state.isInverted); 
+            this.handleGlobalClass(); 
         });
     }
 
@@ -50,7 +49,7 @@ class AppRoutes extends React.Component {
                 <TransitionGroup>
                     <Transition
                         key={ location.pathname }
-                        timeout={500}
+                        timeout={0}
                         mountOnEnter={true}
                         unmountOnExit={true}
                         onEnter={ node => {
@@ -60,7 +59,7 @@ class AppRoutes extends React.Component {
                             // const targetWidth = parent.clientWidth - parseFloat(getComputedStyle(node.parentNode).paddingLeft) * 2;
                             // set the position and properties of the entering element
                             TweenLite.set(node, {
-                                x: 50,
+                                x: 120,
                                 autoAlpha: 0,
                                 // width: targetWidth,
                                 ease: Power2.easeIn
@@ -84,16 +83,15 @@ class AppRoutes extends React.Component {
                             //     width: targetWidth
                             // });
                             // animate out the element
-                            TweenLite.to(node, 1, {
+                            TweenLite.to(node, 0, {
                                 opacity: 0,
-                                x: -50
+                                x: -120,
                             });
                         }} // on exit end
                     >
                         <Switch location={ location }>
-                            <Route exact path="/" render={ (props) => <Home {...props} />}  />
-                            <Route exact path="/about" render={ (props) => <About {...props} />}  />
-                            <Route exact path="/contact" render={ (props) => <Contact {...props} />}  />
+                            <Route exact path="/" component={ Home } />
+                            <Route path="/more" component={More} />
                         </Switch>
                     </Transition>
                 </TransitionGroup>

@@ -1,0 +1,19 @@
+.nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    
+    @media (min-width: 768px) {
+        padding: 2em;
+    }
+}
+
+.name {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}

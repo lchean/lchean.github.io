@@ -89,9 +89,10 @@ class AppRoutes extends React.Component {
                             });
                         }} // on exit end
                     >
-                        <Switch location={ location }>
+                        <Switch>
                             <Route exact path="/" component={ Home } />
-                            <Route path="/more" component={More} />
+                            <Route path="/more" component={ More } />
+                            <Route component={ Home } />
                         </Switch>
                     </Transition>
                 </TransitionGroup>

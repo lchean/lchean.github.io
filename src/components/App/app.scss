@@ -96,3 +96,9 @@ img {
 .italic {
     font-style: italic;
 }
+
+.no-mobile {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}

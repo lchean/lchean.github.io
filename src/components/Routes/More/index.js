@@ -20,7 +20,7 @@ export default class More extends React.Component {
                         <li>Advanced skills in HTML, CSS, and JS</li>
                         <li>Good understanding of Wordpress, Magento 1, Salesforce Commerce Cloud (Demandware)</li>
                         <li>This website uses the <a href="https://fonts.google.com/specimen/EB+Garamond">EB Garamond Google font</a> and was built with <a href="https://github.com/facebook/create-react-app">Create React App</a> and <a href="https://pages.github.com/">Github Pages</a></li>
-                        <li>The photos are from <a href="https://www.hedislimane.com/diary/">Hedi Slimane Diary</a></li>
+                        <li class="no-mobile">The photos are from <a href="https://www.hedislimane.com/diary/">Hedi Slimane Diary</a></li>
                     </ul>
                 </section>
 

@@ -4,7 +4,7 @@ import './gallery.scss';
 
 export default function Gallery({ entries }) {
     return (
-        <aside className="gallery">   
+        <aside className="gallery no-mobile">   
             {
                 entries.map( ({id, src, width, height, title, alt}) => (
                     <figure key={id} className="gallery-figure">

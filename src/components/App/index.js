@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
-import AppRoutes from '../AppRoutes';
+import Routes from '../../Routes';
 
-import Main from '../Main';
-import Gallery, {IMAGES} from '../Layout/Gallery';
-import Nav from '../Layout/Nav';
+import Gallery, {IMAGES} from '../../Layout/Gallery';
+import Nav from '../../Layout/Nav';
 
 import 'normalize.css';
 import './app.scss';
@@ -30,14 +29,13 @@ export default class App extends Component {
         const { isInverted } = this.state;
 
         return (
-            <div className={isInverted ? 'wrapper is-inverted' : 'wrapper'}>
-                <Main>
-                    <Route path="/" render={(props) => (<AppRoutes handleGlobalClass={ this.handleGlobalClass } {...props} />) } />
+            <div className={isInverted ? 'wrapper is-inverted' : 'wrapper'}>                
+                <div className="main">
+                    <Route path="/" render={(props) => (<Routes handleGlobalClass={ this.handleGlobalClass } {...props} />) } />
                     <Nav />                
-                </Main>
+                </div>
                 <Gallery entries={IMAGES} />                
             </div>           
         );
     }
 }
-    

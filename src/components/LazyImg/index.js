@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
-
 import React from 'react';
-import lazySizes from 'lazysizes';
+import 'lazysizes';
 import './lazySizes.scss';
 
 const LazyImg = ({src = "", alt = "", title = "", width = "", height = "" })  =>  (

@@ -33,7 +33,7 @@ export default class Home extends React.Component {
     
                 <p>As a user interface developer, I try to deliver a 'clean' code and be creative without forgetting accessibility.</p>
 
-                <p>You can <a href={"mailto:" + EMAIL} className="italic">Contact me with a mail app</a>, <button type="button" className="btn-clipboard js-clipboard italic" data-clipboard-text={ EMAIL }>copy my email address</button> or via my <a href="https://www.linkedin.com/in/laurent-chean-b045465b/" className="italic">Linkedin profile</a>.</p>
+                <p>You can contact me with a <a href={"mailto:" + EMAIL} className="italic">mail app</a>, by <button type="button" className="btn-clipboard js-clipboard italic" data-clipboard-text={ EMAIL }>copying my email address</button> or via my <a href="https://www.linkedin.com/in/laurent-chean-b045465b/" className="italic">Linkedin profile</a>.</p>
             </article>
         );
     }

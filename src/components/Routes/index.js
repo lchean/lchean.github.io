@@ -3,8 +3,8 @@ import {TweenMax, Power2, TweenLite} from "gsap/TweenMax";
 import { TransitionGroup, Transition } from "react-transition-group";
 import { Route, Switch } from "react-router-dom";
 
-import Home from '../Pages/Home';
-import More from '../Pages/More';
+import Home from '../../pages/Home';
+import More from '../../pages/More';
 
 const completeCall = target => {
     TweenLite.set(target, { clearProps: "position, opacity" });

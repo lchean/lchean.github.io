@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
-import Routes from '../../Routes';
+import Routes from '../Routes';
 
-import Gallery, {IMAGES} from '../../Layout/Gallery';
-import Nav from '../../Layout/Nav';
+import Gallery, {IMAGES} from '../../layout/Gallery';
+import Nav from '../../layout/Nav';
 
 import 'normalize.css';
 import './app.scss';

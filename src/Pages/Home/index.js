@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import React from 'react';
-import './home.scss';
+import './Home.scss';
 import ClipboardJS from 'clipboard';
 
 const EMAIL = 'laurentchean@gmail.com';

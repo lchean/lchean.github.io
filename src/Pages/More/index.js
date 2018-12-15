@@ -1,6 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import './more.scss';
+import './More.scss';
 
 const opts = {
     height: '720',

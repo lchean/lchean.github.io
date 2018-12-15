@@ -1,6 +1,6 @@
 import React from 'react';
 import LazyImg from '../../components/LazyImg';
-import './gallery.scss';
+import './Gallery.scss';
 
 export default function Gallery({ entries }) {
     return (

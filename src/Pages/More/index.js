@@ -13,7 +13,7 @@ const opts = {
 export default class More extends React.Component {
     render() {          
         return (
-            <article className="more">
+            <article>
                 <h2>More</h2>     
                 <section className="more-section">               
                     <ul>

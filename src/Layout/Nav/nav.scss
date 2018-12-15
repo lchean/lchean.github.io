@@ -1,3 +1,5 @@
+@import '../../styles/vars.scss';
+
 .nav {
     position: absolute;
     right: 0;
@@ -5,7 +7,31 @@
     left: 0;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    background-color: $black;
+    color: $white;   
+    padding: 1.75em;
+    transition: color .3s ease-in, background-color .3s ease-in;
+
+    @media screen and (min-width: $bp-mobile) {
+        background-color: transparent;  
+        color: $black;    
+        
+        .is-inverted & {
+            color: $white;
+        }
+    }
+
+    a {
+        &::after {
+            background-color: $white;
+        }
+
+        @media screen and (min-width: $bp-mobile) {
+            &::after {
+                background-color: $black;
+            }
+        }
+    }
 }
 
 .name {

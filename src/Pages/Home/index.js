@@ -24,7 +24,7 @@ export default class Home extends React.Component {
 
     render () {
         return (
-            <article className="home">
+            <article>
                 <h2>Hey,</h2>
                 
                 <p>I am a french front end developer working at <a href="https://www.emakina.nl/" className="italic">Emakina Amsterdam</a>.</p>

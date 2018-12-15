@@ -6,7 +6,7 @@ import Gallery, {IMAGES} from '../../layout/Gallery';
 import Nav from '../../layout/Nav';
 
 import 'normalize.css';
-import './app.scss';
+import '../../styles/global.scss';
 
 export default class App extends Component {
     constructor (props) {

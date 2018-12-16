@@ -4,7 +4,7 @@ import { TransitionGroup, Transition } from "react-transition-group";
 import { Route, Switch } from "react-router-dom";
 
 import Home from '../../pages/Home';
-import More from '../../pages/More';
+import About from '../../pages/About';
 
 const completeCall = target => {
     TweenLite.set(target, { clearProps: "position, opacity" });
@@ -60,7 +60,7 @@ class Routes extends React.Component {
                 >
                     <Switch>
                         <Route exact path="/" component={ Home } />
-                        <Route path="/more" component={ More } />
+                        <Route path="/about" component={ About } />
                         <Route component={ Home } />
                     </Switch>
                 </Transition>

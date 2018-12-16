@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { Route } from "react-router-dom";
-import Routes from '../Routes';
 
-import Gallery, {IMAGES} from '../../layout/Gallery';
-import Nav from '../../layout/Nav';
-
+//Styles
 import 'normalize.css';
 import '../../styles/global.scss';
+
+//Assets
+import { IMAGES } from '../../layout/Gallery';
+
+//Components
+import Loader from '../Loader';
+import Nav from '../../layout/Nav';
+import Gallery from '../../layout/Gallery';
+const Routes = lazy( () => import('../Routes') );
 
 export default class App extends Component {
     constructor (props) {
@@ -29,12 +35,17 @@ export default class App extends Component {
         const { isInverted } = this.state;
 
         return (
-            <div className={isInverted ? 'wrapper is-inverted' : 'wrapper'}>                
+            <div className={isInverted ? 'wrapper is-inverted' : 'wrapper'}>           
                 <div className="main">
-                    <Route path="/" render={(props) => (<Routes handleGlobalClass={ this.handleGlobalClass } {...props} />) } />
-                    <Nav />                
+                    <Route path="/" render={ props => (
+                        <Suspense fallback={<Loader />}>
+                            <Routes handleGlobalClass={this.handleGlobalClass} {...props} />                         
+                        </Suspense>
+                        )
+                    } />
+                    <Nav />     
                 </div>
-                <Gallery entries={IMAGES} />                
+                <Gallery entries={IMAGES} />
             </div>           
         );
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import './More.scss';
+import './About.scss';
 
 const opts = {
     height: '720',
@@ -10,12 +10,12 @@ const opts = {
     }
 };
 
-export default class More extends React.Component {
+export default class About extends React.Component {
     render() {          
         return (
             <article>
                 <h2>More</h2>     
-                <section className="more-section">               
+                <section className="about-section">               
                     <ul>
                         <li>Advanced skills in HTML, CSS, and JS</li>
                         <li>Good understanding of Wordpress, Magento 1, Salesforce Commerce Cloud (Demandware)</li>
@@ -24,7 +24,7 @@ export default class More extends React.Component {
                     </ul>
                 </section>
 
-                <section className="more-section youtube-video">
+                <section className="about-section youtube-video">
                     <p>Life is too serious so let's listen to some good french (summer) music :</p>
                     <figure className="youtube">
                         <YouTube

@@ -17,11 +17,11 @@ export default class App extends React.Component {
       const clipboard = new ClipboardJS(CLIPBOARD_ID);
 
       clipboard.on('success', (e) => {
-          const {trigger: btn} = e
+          const { trigger: btn, clearSelection } = e
 
           btn.classList.add(isCopiedClass)
           setTimeout(() =>  btn.classList.remove(isCopiedClass), 2000)
-          e.clearSelection()
+          clearSelection()
       })
   }
 
@@ -69,7 +69,7 @@ export default class App extends React.Component {
 
             <P>As a user interface developer, I try to deliver a 'clean' code and be creative without forgetting accessibility.</P>
 
-            <P>I am available for freelance. You can contact me with : a <A href={`mailto:${EMAIL}`}>mail app</A>, via my <A href="https://www.linkedin.com/in/laurent-chean-b045465b/">Linkedin profile</A> or by <BtnClipboard feedback="Email copied !" className="js-clipboard" clipboardText={EMAIL}>copying my email address</BtnClipboard>.</P>
+            <P>I am available for freelance. You can contact me with : a <A href={`mailto:${EMAIL}`}>mail app</A>, via my <A href="https://www.linkedin.com/in/laurent-chean-b045465b/">Linkedin profile</A> or by <BtnClipboard feedback="Email copied !" clipboardText={EMAIL}>copying my email address</BtnClipboard>.</P>
         </article>
       </main>
     )

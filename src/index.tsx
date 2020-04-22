@@ -5,7 +5,4 @@ import App from './components/App'
 import 'normalize.css'
 import './styles/global.scss'
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'))

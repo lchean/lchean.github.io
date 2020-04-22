@@ -5,8 +5,8 @@ import { jsx } from '@emotion/core'
 import { underlinedLink } from '../utils'
 
 type Props = {
-  children: React.ReactNode,
-  href: string,
+  children: React.ReactNode
+  href: string
 }
 
 const A: FunctionComponent<Props> = ({ children, href }) => (

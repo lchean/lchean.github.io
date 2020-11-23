@@ -1,6 +1,6 @@
-import React from 'react'
-import ClipboardJS from 'clipboard'
 /** @jsx jsx */
+import * as React from 'react'
+import ClipboardJS from 'clipboard'
 import { jsx, css, Global } from '@emotion/core'
 
 import P from './P'
@@ -12,11 +12,11 @@ import { isCopiedClass, colors } from '../utils'
 const EMAIL = 'laurentchean@gmail.com'
 const CLIPBOARD_ID = '.js-clipboard'
 
-export default class App extends React.Component {
+export default class App extends React.Component<{}> {
   handleClipboard(): void {
     const clipboard = new ClipboardJS(CLIPBOARD_ID)
 
-    clipboard.on('success', (e) => {
+    clipboard.on('success', e => {
       const { trigger: btn, clearSelection } = e
 
       btn.classList.add(isCopiedClass)
@@ -29,7 +29,7 @@ export default class App extends React.Component {
     this.handleClipboard()
   }
 
-  render() {
+  render(): React.ReactNode {
     const { white, black } = colors
 
     return (
@@ -45,6 +45,16 @@ export default class App extends React.Component {
       >
         <Global
           styles={css`
+            html {
+              box-sizing: border-box;
+            }
+
+            *,
+            *:before,
+            *:after {
+              box-sizing: inherit;
+            }
+
             body {
               font-family: 'EB Garamond', serif;
               font-size: 1em;

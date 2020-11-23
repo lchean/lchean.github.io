@@ -4,7 +4,7 @@ import { jsx, css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import { isCopiedClass, underlinedLink } from '../utils'
 
-type Props = {
+interface Props {
   children: React.ReactNode
   feedback: string
   clipboardText: string

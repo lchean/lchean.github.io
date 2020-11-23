@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 export const isCopiedClass = 'is-copied'
 
-type TColors = {
+interface TColors {
   white: string
   black: string
 }
@@ -14,13 +14,16 @@ export const colors: TColors = {
 export const underlinedLink = css`
   position: relative;
   padding: 0;
+  font-size: 1em;
   color: inherit;
   text-decoration: none;
+  font-family: 'EB Garamond', serif;
   font-style: italic;
   outline: none;
   border: 0;
   cursor: pointer;
   letter-spacing: inherit;
+  background-color: transparent;
 
   &:focus,
   &:hover {

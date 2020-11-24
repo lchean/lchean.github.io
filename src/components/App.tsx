@@ -53,10 +53,14 @@ export default class App extends React.Component<{}> {
 
             body {
               font-family: 'Spectral', serif;
-              font-size: 1.88em;
+              font-size: 5vw;
               line-height: 1.8;
               background-color: ${black};
               color: ${white};
+
+              @media (min-width: 420px) {
+                font-size: 1.9em;
+              }
             }
           `}
         />

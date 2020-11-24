@@ -4,7 +4,7 @@ import { COLORS } from './constants'
 export const underlinedLink = css`
   position: relative;
   padding: 0;
-  font-size: 1em;
+  font-size: inherit;
   color: inherit;
   text-decoration: none;
   font-family: 'Spectral', serif;

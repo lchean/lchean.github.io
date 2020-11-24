@@ -1,15 +1,5 @@
-import { css } from '@emotion/core'
-export const isCopiedClass = 'is-copied'
-
-interface TColors {
-  white: string
-  black: string
-}
-
-export const colors: TColors = {
-  white: '#fefefe',
-  black: '#222',
-}
+import { css } from '@emotion/react'
+import { COLORS } from './constants'
 
 export const underlinedLink = css`
   position: relative;
@@ -17,19 +7,18 @@ export const underlinedLink = css`
   font-size: 1em;
   color: inherit;
   text-decoration: none;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Spectral', serif;
   font-style: italic;
   outline: none;
   border: 0;
   cursor: pointer;
-  letter-spacing: inherit;
   background-color: transparent;
 
   &:focus,
   &:hover {
     &::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
+      transform: scaleX(0);
+      transform-origin: bottom right;
     }
   }
 
@@ -40,9 +29,9 @@ export const underlinedLink = css`
     left: 0;
     bottom: 0;
     height: 1px;
-    background-color: #222;
-    transform: scaleX(0);
-    transform-origin: bottom right;
+    background-color: ${COLORS.white};
+    transform: scaleX(1);
+    transform-origin: bottom left;
     transition: transform 0.25s ease-out;
   }
 `

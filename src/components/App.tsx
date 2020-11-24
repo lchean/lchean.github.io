@@ -1,26 +1,23 @@
 /** @jsx jsx */
 import * as React from 'react'
 import ClipboardJS from 'clipboard'
-import { jsx, css, Global } from '@emotion/core'
+import { jsx, css, Global } from '@emotion/react'
 
 import P from './P'
 import A from './A'
 import BtnClipboard from './BtnClipboard'
 
-import { isCopiedClass, colors } from '../utils'
-
-const EMAIL = 'laurentchean@gmail.com'
-const CLIPBOARD_ID = '.js-clipboard'
+import { IS_COPIED_CLASS, COLORS, CLIPBOARD_ID, EMAIL } from '../utils/constants'
 
 export default class App extends React.Component<{}> {
   handleClipboard(): void {
     const clipboard = new ClipboardJS(CLIPBOARD_ID)
 
-    clipboard.on('success', e => {
+    clipboard.on('success', (e) => {
       const { trigger: btn, clearSelection } = e
 
-      btn.classList.add(isCopiedClass)
-      setTimeout(() => btn.classList.remove(isCopiedClass), 2000)
+      btn.classList.add(IS_COPIED_CLASS)
+      setTimeout(() => btn.classList.remove(IS_COPIED_CLASS), 2000)
       clearSelection()
     })
   }
@@ -30,7 +27,7 @@ export default class App extends React.Component<{}> {
   }
 
   render(): React.ReactNode {
-    const { white, black } = colors
+    const { white, black } = COLORS
 
     return (
       <main
@@ -38,7 +35,6 @@ export default class App extends React.Component<{}> {
           display: flex;
           align-items: center;
           max-width: 700px;
-          height: 100vh;
           margin-right: auto;
           margin-left: auto;
         `}
@@ -56,26 +52,24 @@ export default class App extends React.Component<{}> {
             }
 
             body {
-              font-family: 'EB Garamond', serif;
-              font-size: 1em;
-              line-height: 1.6;
-              letter-spacing: 0.0625em;
-              background-color: ${white};
-              color: ${black};
+              font-family: 'Spectral', serif;
+              font-size: 1.88em;
+              line-height: 1.8;
+              background-color: ${black};
+              color: ${white};
             }
           `}
         />
         <article
           css={css`
-            padding: 2rem;
+            padding: 2.5rem;
           `}
         >
           <h1
             css={css`
               margin-top: 0;
               margin-bottom: 0.75em;
-              font-size: 1.25rem;
-              font-weight: 400;
+              font-size: 1em;
             `}
           >
             Hey !

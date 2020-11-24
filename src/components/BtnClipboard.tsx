@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import React, { FunctionComponent } from 'react'
-import { jsx, css } from '@emotion/core'
+import * as React from 'react'
+import { jsx, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import { isCopiedClass, underlinedLink } from '../utils'
+import { IS_COPIED_CLASS } from '../utils/constants'
+import { underlinedLink } from '../utils/underlinedLink'
 
 interface Props {
   children: React.ReactNode
@@ -10,7 +11,7 @@ interface Props {
   clipboardText: string
 }
 
-const BtnClipboard: FunctionComponent<Props> = ({ children, feedback, clipboardText }) => (
+const BtnClipboard: React.FC<Props> = ({ children, feedback, clipboardText }) => (
   <button type="button" css={underlinedLink} className="js-clipboard" data-clipboard-text={clipboardText}>
     <span
       css={css`
@@ -22,7 +23,7 @@ const BtnClipboard: FunctionComponent<Props> = ({ children, feedback, clipboardT
         transform-origin: bottom left;
         transition: transform 0.25s ease-out;
 
-        .${isCopiedClass} & {
+        .${IS_COPIED_CLASS} & {
           transform: scaleY(1);
           transform-origin: top left;
         }

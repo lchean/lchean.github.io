@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import * as React from 'react'
 
-type Props = {
+interface Props {
   children: React.ReactNode
 }
 
-const P: FunctionComponent<Props> = ({ children }) => <p>{children}</p>
+const P: React.FC<Props> = ({ children }) => <p>{children}</p>
 
 P.propTypes = {
   children: PropTypes.node.isRequired,

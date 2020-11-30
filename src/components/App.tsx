@@ -74,6 +74,7 @@ export default class App extends React.Component<{}> {
               margin-top: 0;
               margin-bottom: 0.75em;
               font-size: 1em;
+              font-weight: normal;
             `}
           >
             Hey !
